@@ -1,0 +1,86 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node.js dependencies and build artifacts
+node_modules/
+dist/
+dist-ssr/
+build/
+.turbo/
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+*.local
+
+# Hardhat files
+cache/
+artifacts/
+typechain-types/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Debug logs
+debug.log*
+
+# Compiled output
+*.tsbuildinfo
+.next/
+out/
+.vercel
+.netlify
+
+# Testing files
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Others
+.cache/
+.parcel-cache/
+
+# Private keys and sensitive data
+**/private*.js
+**/secret*.js
+*private_key*
+*secret_key*
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.swp
+*.save
+
+# Specific to this project
+chain-id-verification.txt
+*.broken
+index.js.backup
+index.js.fixed
+index.js.original
+index.js.new

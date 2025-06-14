@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Chronos Logo</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Outer Circle -->
+        <circle fill="#22c1c3" cx="100" cy="100" r="95"></circle>
+        <!-- Inner Circle -->
+        <circle fill="#2C3E50" cx="100" cy="100" r="75"></circle>
+        <!-- Clock Face -->
+        <circle fill="#FFFFFF" cx="100" cy="100" r="65"></circle>
+        <!-- Clock Markings -->
+        <line x1="100" y1="45" x2="100" y2="55" stroke="#2C3E50" stroke-width="3"></line>
+        <line x1="100" y1="145" x2="100" y2="155" stroke="#2C3E50" stroke-width="3"></line>
+        <line x1="45" y1="100" x2="55" y2="100" stroke="#2C3E50" stroke-width="3"></line>
+        <line x1="145" y1="100" x2="155" y2="100" stroke="#2C3E50" stroke-width="3"></line>
+        <!-- Hour Hand -->
+        <line x1="100" y1="100" x2="100" y2="70" stroke="#2C3E50" stroke-width="4" stroke-linecap="round"></line>
+        <!-- Minute Hand -->
+        <line x1="100" y1="100" x2="130" y2="100" stroke="#22c1c3" stroke-width="3" stroke-linecap="round"></line>
+        <!-- Center Point -->
+        <circle fill="#2C3E50" cx="100" cy="100" r="5"></circle>
+        <!-- Blockchain Elements -->
+        <rect x="80" y="175" width="40" height="10" rx="2" fill="#22c1c3"></rect>
+        <rect x="90" y="165" width="20" height="10" rx="2" fill="#22c1c3"></rect>
+        <rect x="70" y="185" width="60" height="10" rx="2" fill="#22c1c3"></rect>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Connect Wallet Illustration</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect fill="#F8F9FA" x="0" y="0" width="800" height="400" rx="10"></rect>
+        
+        <!-- Wallet Icon -->
+        <rect fill="#495057" x="150" y="100" width="200" height="150" rx="15"></rect>
+        <rect fill="#6C757D" x="170" y="120" width="160" height="110" rx="10"></rect>
+        <rect fill="#ADB5BD" x="190" y="140" width="120" height="30" rx="5"></rect>
+        <rect fill="#ADB5BD" x="190" y="180" width="120" height="30" rx="5"></rect>
+        
+        <!-- Arrow -->
+        <path d="M380,170 L420,170 L450,170" stroke="#212529" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M435,150 L455,170 L435,190" stroke="#212529" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+        
+        <!-- App Icon -->
+        <rect fill="#0D6EFD" x="480" y="100" width="150" height="150" rx="15"></rect>
+        <text font-family="Arial" font-size="60" font-weight="bold" fill="#FFFFFF" x="505" y="190">App</text>
+        
+        <!-- Text Labels -->
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="#212529" x="160" y="280">Wallet</text>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="#212529" x="495" y="280">Chronos</text>
+        <text font-family="Arial" font-size="24" font-weight="bold" fill="#0D6EFD" x="320" y="330">Connect Wallet</text>
+    </g>
+</svg>

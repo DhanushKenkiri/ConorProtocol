@@ -1,0 +1,265 @@
+/* Main app styles with retro terminal theme */
+
+/* Import JetBrains Mono font for terminal feel */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import './xmtp.css';
+
+:root {
+  --terminal-bg: #0a0b0c;
+  --terminal-text: #64FFDA;
+  --terminal-text-secondary: #a4d8cf;
+  --terminal-border: #30363d;
+  --terminal-cursor: #64FFDA;
+  
+  --color-proposed: #f0ad4e;
+  --color-active: #0d6efd;
+  --color-completed: #198754;
+  --color-expired: #dc3545;
+  --color-voided: #6c757d;
+  
+  --retro-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Terminal effect styling */
+.terminal {
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+  border: 1px solid var(--terminal-border);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: var(--retro-shadow);
+  position: relative;
+  overflow: auto;
+}
+
+.terminal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.terminal-header {
+  border-bottom: 1px solid var(--terminal-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.terminal-body {
+  padding: 1rem 0;
+}
+
+.chat-container {
+  height: 70vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--terminal-border) var(--terminal-bg);
+}
+
+.chat-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--terminal-text-secondary);
+}
+
+.chat-message.alice {
+  border-left-color: #ff6b6b;
+}
+
+.chat-message.bob {
+  border-left-color: #339af0;
+}
+
+.chat-message .timestamp {
+  color: var(--terminal-text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.chat-input-container {
+  padding: 1rem;
+  border-top: 1px solid var(--terminal-border);
+}
+
+/* Button styling with retro effect */
+.btn-retro {
+  background-color: var(--terminal-bg);
+  border: 1px solid var(--terminal-text);
+  color: var(--terminal-text);
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-retro:hover {
+  background-color: var(--terminal-text);
+  color: var(--terminal-bg);
+  box-shadow: var(--retro-shadow);
+}
+
+.btn-retro:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Input styling */
+.form-control-retro {
+  background-color: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  color: var(--terminal-text);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.form-control-retro:focus {
+  border-color: var(--terminal-text);
+  box-shadow: 0 0 0 0.2rem rgba(100, 255, 218, 0.25);
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+}
+
+/* Status tags for chrono contracts */
+.tag {
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tag-proposed {
+  background-color: rgba(240, 173, 78, 0.2);
+  color: var(--color-proposed);
+  border: 1px solid var(--color-proposed);
+}
+
+.tag-active {
+  background-color: rgba(13, 110, 253, 0.2);
+  color: var(--color-active);
+  border: 1px solid var(--color-active);
+}
+
+.tag-completed {
+  background-color: rgba(25, 135, 84, 0.2);
+  color: var(--color-completed);
+  border: 1px solid var(--color-completed);
+}
+
+.tag-expired {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: var(--color-expired);
+  border: 1px solid var(--color-expired);
+}
+
+.tag-voided {
+  background-color: rgba(108, 117, 125, 0.2);
+  color: var(--color-voided);
+  border: 1px solid var(--color-voided);
+}
+
+/* Chrono Contract Card */
+.chrono-contract {
+  background-color: rgba(10, 11, 12, 0.8);
+  border: 1px solid var(--terminal-border);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.chrono-contract-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.chrono-contract-body {
+  margin-bottom: 0.75rem;
+}
+
+.chrono-contract-footer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Toast notifications */
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1050;
+}
+
+.toast-retro {
+  background-color: rgba(10, 11, 12, 0.95);
+  border: 1px solid var(--terminal-border);
+  color: var(--terminal-text);
+}
+
+/* Animation for terminal cursor effect */
+@keyframes cursor-blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.cursor::after {
+  content: '|';
+  margin-left: 2px;
+  opacity: 0;
+  animation: cursor-blink 1.2s infinite;
+  color: var(--terminal-cursor);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--terminal-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--terminal-text-secondary);
+}
